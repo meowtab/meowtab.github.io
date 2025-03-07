@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200&display=swap');
+	body {
+		font-family: 'Lato', sans-serif;
+    	background-color: #1f2020;
+        color: #000080;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 50px; 
+    }
+        
+    /* ☥ Header with Search Bar ☥ */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        font-size: 18px
+    }
+    .header h1 {
+        color: #e8eaed;
+        margin: 0;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input[type="text"] {
+        padding: 8px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 200px;
+        font-size: 16px;
+        border: 2px solid #181818;
+    	background-color: #303030;
+    	color: #a3a3a3;
+    }
+    .search-bar button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        background-color: #303030;
+        border: 2px solid #181818;
+        border-radius: 20px;
+        color: #ababab;
+        cursor: pointer; 
+        font-size: 16px;
+    }
+    .search-bar input::placeholder {
+    	color: #a3a3a3;
+	}
+    
+    
+    /* ☥ Main Content ☥ */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    .category {
+        width: 200px;
+        min-height: 120px;
+        margin: 10px;
+        background-color: #f1f1f1;
+        padding: 15px;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        border: 1px solid black;
+        border-radius: 10px;
+ 		background-image: 
+        	linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+        	url("paper2.png");
+    	background-repeat: repeat;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
+    .category-overlay {
+    	position: absolute;
+    	right: -5px;
+    	top: 15px;
+    	width: 85px;
+    	transform: rotate(10deg);
+    	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    	pointer-events: none;
+	}
+    .category h2 {
+        font-size: 18px;
+        color: #bf3d3e;
+        text-decoration: none;
+        margin-bottom: -20px;
+        margin-top: -1px;
+    	padding-bottom: 16px;
+    }
+    .category h2 a {
+        color: #bf3d3e;
+        text-decoration: none;
+    }
+    .category h2 a:hover {
+        text-decoration: underline;
+    }
+    .category ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .category ul li {
+        margin: 3px 0px;
+        padding:0px;
+        font-size: 16px;
+    }
+    .category ul li a {
+        color: #787878;
+        text-decoration: none;
+    }
+    .category ul li a:hover {
+        text-decoration: underline;
+    }
+
+	/* ☥ Bottom Bar ☥ */
+    .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    	background-color: #1f2020;
+        padding: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    .bottom-bar a {
+        color: #e8eaed;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 20px;
+    }
+    .bottom-bar a:hover {
+        text-decoration: underline;
+    }	
+	
+	/* ☥ Light MODE ☥ */
+	@media (prefers-color-scheme: light) {
+    body {
+        background-color: #e8e7e6;
+    }
+    .bottom-bar {
+    	background-color: #e8e7e6;
+    }
+	.bottom-bar a {
+        color: #747474;
+    }
+    .header h1 {
+        color: #747474;
+    }
+    .category {
+    	border-color: #848484;
+    }
+    .search-bar input[type="text"] {
+		border: 1px solid #9c9a9a;
+    }
+
+</style>
+
+<body>
+    <!-- Header Section with Search Bar -->
+    <div class="header">
+        <h1>WELCOME</h1>
+        <div class="search-bar">
+            <form id="searchForm" action="https://www.google.com/search?q=" method="get">
+                <input type="text" name="q" placeholder="Search..." required>
+                <button class="button" role="button">Go</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!-- Home Tab -->
+        <div class="category" id="books">
+            <h2><a href="#" class="tab" data-tab="book-tab">Books</a></h2>
+            
+            <ul>
+                <li><a href="https://www.goodreads.com/">Goodreads</a></li>
+                <li><a href="https://www.smashwords.com/">Smashwords</a></li>
+                <li><a href="https://www.amazon.ca/b?ie=UTF8&node=2972705011">Kindle Store</a></li>
+            </ul>
+        </div>
+        <div class="category" id="media">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://youtube.com/">YouTube</a></li>
+                <li><a href="https://bsky.app/">Bluesky</a></li>
+                <li><a href="https://meow.social/home">Fedi</a></li>
+                <li><a href="https://www.tumblr.com/">Tumblr</a></li>
+                <li><a href="https://ca.pinterest.com/">Pinterest</a></li>
+            </ul>
+        </div>
+        <div class="category" id="reddit">
+            <h2>Reddit</h2>
+            <ul>
+                <li><a href="https://www.reddit.com/r/apple/">r/apple</a></li>
+                <li><a href="https://www.reddit.com/r/food/">r/food</a></li>
+                <li><a href="https://www.reddit.com/r/horrorlit/">r/horrorlit</a></li>
+                <li><a href="https://www.reddit.com/r/Kemetic/">r/kemetic</a></li>
+            </ul>
+        </div>
+        <div class="category" id="comics">
+           <h2>Comics</h2>
+            <ul>
+                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
+                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
+            </ul>
+            <img src="comic.webp" class="category-overlay">
+        	</div>
+         <div class="category" id="blogs">
+            <h2><a href="#" class="tab" data-tab="blog-tab">Blogs</a></h2>
+            <ul>
+                <li><a href="https://zenhabits.net/">Zen Habits</a></li>
+                <li><a href="https://daringfireball.net/">Daring Fireball</a></li>
+                <li><a href="https://www.muddycolors.com/" target="_blank">Muddy Colors</a></li>
+            </ul>
+        </div>
+        <div class="category" id="kemetic">
+            <h2>Kemetic</h2>
+            <ul>
+                <li><a href="https://www.kemeticblog.com/">Kemetic Blog</a></li>
+                <li><a href="https://seshkemet.weebly.com/">Seshkemet</a></li>
+                <li><a href="https://www.egyptianhieroglyphs.net/gardiners-sign-list/">Hieroglyphs</a></li>
+                <li><a href="https://crowley-thoth.com/thoth-ankh.php">Tarot</a></li>
+            </ul>
+        </div>
+
+</body>
+
+
+</html>
