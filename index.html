@@ -162,9 +162,23 @@
     .category {
     	border-color: #848484;
     }
-    .search-bar input[type="text"] {
-		border: 1px solid #9c9a9a;
+    .search-bar {
+        display: flex;
+        align-items: center;
     }
+    .search-bar input[type="text"] {
+        border: 2px solid #747474;
+    	background-color: #e8e7e6;
+    	color: #747474;
+    }
+    .search-bar button {
+        background-color: #e8e7e6;
+        border: 2px solid #747474;
+        color: #747474;
+    }
+    .search-bar input::placeholder {
+    	color: #747474;
+	}
 
 </style>
 
@@ -184,7 +198,7 @@
         
         <!-- Home Tab -->
         <div class="category" id="books">
-            <h2><a href="#" class="tab" data-tab="book-tab">Books</a></h2>
+            <h2>Books</h2>
             
             <ul>
                 <li><a href="https://www.goodreads.com/">Goodreads</a></li>
@@ -199,33 +213,33 @@
                 <li><a href="https://bsky.app/">Bluesky</a></li>
                 <li><a href="https://meow.social/home">Fedi</a></li>
                 <li><a href="https://www.tumblr.com/">Tumblr</a></li>
-                <li><a href="https://ca.pinterest.com/">Pinterest</a></li>
             </ul>
         </div>
-        <div class="category" id="reddit">
-            <h2>Reddit</h2>
+         <div class="category" id="shopping">
+            <h2>Shopping</h2>
             <ul>
-                <li><a href="https://www.reddit.com/r/apple/">r/apple</a></li>
-                <li><a href="https://www.reddit.com/r/food/">r/food</a></li>
-                <li><a href="https://www.reddit.com/r/horrorlit/">r/horrorlit</a></li>
-                <li><a href="https://www.reddit.com/r/Kemetic/">r/kemetic</a></li>
+                <li><a href="https://www.etsy.com/ca/">Etsy</a></li>
+                <li><a href="https://www.amazon.ca/">Amazon</a></li>
+                <li><a href="https://www.ebay.ca/">eBay</a></li>
+                <li><a href="https://www.temu.com/">Temu</a></li>
             </ul>
         </div>
-        <div class="category" id="comics">
-           <h2>Comics</h2>
-            <ul>
-                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
-                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
-            </ul>
-            <img src="comic.webp" class="category-overlay">
-        	</div>
          <div class="category" id="blogs">
-            <h2><a href="#" class="tab" data-tab="blog-tab">Blogs</a></h2>
+            <h2>Blogs</h2>
             <ul>
                 <li><a href="https://zenhabits.net/">Zen Habits</a></li>
                 <li><a href="https://daringfireball.net/">Daring Fireball</a></li>
                 <li><a href="https://www.muddycolors.com/" target="_blank">Muddy Colors</a></li>
             </ul>
+        </div>
+                <div class="category" id="comics">
+           <h2>Comics</h2>
+            <ul>
+                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
+                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
+                <li><a href="https://www.reddit.com/r/DCcomics/">Reddit DC</a></li>
+            </ul>
+            <img src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-6355816.jpg?1741165980" class="category-overlay">
         </div>
         <div class="category" id="kemetic">
             <h2>Kemetic</h2>
