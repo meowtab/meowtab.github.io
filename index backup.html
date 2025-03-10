@@ -76,6 +76,9 @@
         padding-bottom: 4px;
         border: 1px solid black;
         border-radius: 10px;
+ 		background-image: 
+        	linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+        	url("tile-paper.png");
     	background-repeat: repeat;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
         position: relative;
@@ -204,111 +207,14 @@
         <!-- Home Tab -->
         <div id="home-tab" class="tab-content active">
         <div class="category" id="books">
-            <h2><a href="#" class="tab" data-tab="book-tab">Books</a></h2>
+            <h2> <a href="#" class="tab" data-tab="book-tab">Books</a></h2>
+            
             <ul>
                 <li><a href="https://www.goodreads.com/">Goodreads</a></li>
                 <li><a href="https://www.smashwords.com/">Smashwords</a></li>
                 <li><a href="https://www.amazon.ca/b?ie=UTF8&node=2972705011">Kindle Store</a></li>
             </ul>
         </div>
-        <div class="category" id="media">
-            <h2><a href="#" class="tab" data-tab="media-tab">Social Media</a></h2>
-            <ul>
-                <li><a href="https://youtube.com/">YouTube</a></li>
-                <li><a href="https://bsky.app/">Bluesky</a></li>
-                <li><a href="https://meow.social/home">Fedi</a></li>
-                <li><a href="https://www.tumblr.com/">Tumblr</a></li>
-            </ul>
-        </div>
-         <div class="category" id="shopping">
-            <h2><a href="#" class="tab" data-tab="shopping-tab">Shopping</a></h2>
-            <ul>
-                <li><a href="https://www.etsy.com/ca/">Etsy</a></li>
-                <li><a href="https://www.amazon.ca/">Amazon</a></li>
-                <li><a href="https://www.ebay.ca/">eBay</a></li>
-                <li><a href="https://www.temu.com/">Temu</a></li>
-            </ul>
-        </div>
-         <div class="category" id="blogs">
-            <h2><a href="#" class="tab" data-tab="blog-tab">Blogs</a></h2>
-            <ul>
-                <li><a href="https://zenhabits.net/">Zen Habits</a></li>
-                <li><a href="https://daringfireball.net/">Daring Fireball</a></li>
-                <li><a href="https://www.muddycolors.com/" target="_blank">Muddy Colors</a></li>
-            </ul>
-        </div>
-        <div class="category" id="comics">
-            <h2> <a href="#" class="tab" data-tab="comic-tab">Comics</a></h2>
-            <ul>
-                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
-                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
-                <li><a href="https://www.reddit.com/r/DCcomics/">Reddit DC</a></li>
-            </ul>
-            <img src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-6355816.jpg?1741165980" class="category-overlay">
-        </div>
-        <div class="category" id="kemetic">
-            <h2> <a href="#" class="tab" data-tab="kemetic-tab">Kemetic</a></h2>
-            <ul>
-                <li><a href="https://www.kemeticblog.com/">Kemetic Blog</a></li>
-                <li><a href="https://seshkemet.weebly.com/">Seshkemet</a></li>
-                <li><a href="https://www.egyptianhieroglyphs.net/gardiners-sign-list/">Hieroglyphs</a></li>
-                <li><a href="https://crowley-thoth.com/thoth-ankh.php">Tarot</a></li>
-            </ul>
-        </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        <!-- BLOGS TAB -->
-        <div id="blog-tab" class="tab-content">
-         <div class="category" id="blogs">
-            <h2>Blogs</h2>
-            <ul>
-                <li><a href="https://zenhabits.net/">Zen Habits</a></li>
-                <li><a href="https://daringfireball.net/">Daring Fireball</a></li>
-                <li><a href="https://www.muddycolors.com/" target="_blank">Muddy Colors</a></li>
-            </ul>
-        </div>
-		</div>
-        
-        
-        
-        <!-- BOOKS TAB -->
-        <div id="book-tab" class="tab-content">
-        <div class="category" id="b-books">
-            <h2>Books</h2>
-            <ul>
-                <li><a href="https://www.goodreads.com/">Goodreads</a></li>
-                <li><a href="https://www.smashwords.com/">Smashwords</a></li>
-                <li><a href="https://www.amazon.ca/b?ie=UTF8&node=2972705011">Kindle Store</a></li>
-            </ul>
-            <img src="https://i.thriftbooks.com/api/imagehandler/7834BF224B08F38375B3A5DBC01CC7C28FE4329A.jpeg" class="category-overlay">
-        </div>
-    	</div>
-        
-
-        
-        
-        <!-- COMICS TAB -->
-        <div id="comic-tab" class="tab-content">
-        <div class="category" id="comics">
-            <h2> <a href="#" class="tab" data-tab="comic-tab">Comics</a></h2>
-            <ul>
-                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
-                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
-                <li><a href="https://www.reddit.com/r/DCcomics/">Reddit DC</a></li>
-            </ul>
-            <img src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-7865005.jpg?1721734448" class="category-overlay">
-        </div>
-		</div>
-		
-		
-		
-		<!-- MEDIA TAB -->
-        <div id="media-tab" class="tab-content">
         <div class="category" id="media">
             <h2>Social Media</h2>
             <ul>
@@ -318,13 +224,6 @@
                 <li><a href="https://www.tumblr.com/">Tumblr</a></li>
             </ul>
         </div>
-		</div>
-		
-		
-		
-		
-		<!-- SHOPPING TAB -->
-        <div id="shopping-tab" class="tab-content">
          <div class="category" id="shopping">
             <h2>Shopping</h2>
             <ul>
@@ -334,13 +233,24 @@
                 <li><a href="https://www.temu.com/">Temu</a></li>
             </ul>
         </div>
-		</div>
-		
-		
-		
-		<!-- KEMETIC TAB -->
-        <div id="kemetic-tab" class="tab-content">
-         <div class="category" id="kemetic">
+         <div class="category" id="blogs">
+            <h2>Blogs</h2>
+            <ul>
+                <li><a href="https://zenhabits.net/">Zen Habits</a></li>
+                <li><a href="https://daringfireball.net/">Daring Fireball</a></li>
+                <li><a href="https://www.muddycolors.com/" target="_blank">Muddy Colors</a></li>
+            </ul>
+        </div>
+                <div class="category" id="comics">
+            <h2> <a href="#" class="tab" data-tab="comic-tab">Comics</a></h2>
+            <ul>
+                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
+                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
+                <li><a href="https://www.reddit.com/r/DCcomics/">Reddit DC</a></li>
+            </ul>
+            <img src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-6355816.jpg?1741165980" class="category-overlay">
+        </div>
+        <div class="category" id="kemetic">
             <h2>Kemetic</h2>
             <ul>
                 <li><a href="https://www.kemeticblog.com/">Kemetic Blog</a></li>
@@ -349,20 +259,193 @@
                 <li><a href="https://crowley-thoth.com/thoth-ankh.php">Tarot</a></li>
             </ul>
         </div>
-		</div>
-		
-		
-		
-		
-		
+        </div>
+        
+        
+        
+        <!-- Books Tab -->
+        <div id="book-tab" class="tab-content">
+        <div class="category" id="book-discovery">
+            <h2>Book Discovery</h2>
+            <ul>
+                <li><a href="https://www.goodreads.com/">Goodreads</a></li>
+                <li><a href="https://www.reddit.com/r/suggestmeabook/">r/suggestmeabook</a></li>
+                <li><a href="https://app.thestorygraph.com/">The StoryGraph</a></li>
+            </ul>
+        </div>
 
-		
-		
-		
-		
-		
-		
-	</div>
+        <div class="category" id="ebooks">
+            <h2>Digital Reading</h2>
+            <ul>
+                <li><a href="https://www.smashwords.com/">Smashwords</a></li>
+                <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
+                <li><a href="https://www.archive.org/details/texts">Internet Archive</a></li>
+                <li><a href="https://www.amazon.ca/kindle-dbs/storefront">Kindle Store</a></li>
+            </ul>
+        </div>
+        
+        <div class="category" id="book-sellers">
+            <h2>Bookstores</h2>
+            <ul>
+                <li><a href="https://www.amazon.ca/books-used-books-textbooks/b?ie=UTF8&node=916520">Amazon Books</a></li>
+                <li><a href="https://www.barnesandnoble.com/">Barnes & Noble</a></li>
+                <li><a href="https://www.abeBooks.com/">AbeBooks</a></li>
+                <li><a href="https://www.thriftbooks.com/">ThriftBooks</a></li>
+            </ul>
+            <img src="https://i.thriftbooks.com/api/imagehandler/7834BF224B08F38375B3A5DBC01CC7C28FE4329A.jpeg" class="category-overlay">
+        </div>
+
+        <div class="category" id="audiobooks">
+            <h2>Audiobooks</h2>
+            <ul>
+                <li><a href="https://www.audible.com/">Audible</a></li>
+                <li><a href="https://librivox.org/">LibriVox</a></li>
+                <li><a href="https://www.scribd.com/">Scribd</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="social-media">
+            <h2>Bookish Social Media</h2>
+            <ul>
+                <li><a href="https://www.tumblr.com/tagged/bookblr">Tumblr (Bookblr)</a></li>
+                <li><a href="https://bsky.app/">Bluesky</a></li>
+                <li><a href="https://www.reddit.com/r/books/">Reddit Books</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="literary-magazines">
+            <h2>Literary Magazines</h2>
+            <ul>
+                <li><a href="https://www.clarkesworldmagazine.com/">Clarkesworld</a></li>
+                <li><a href="https://www.theparisreview.org/">The Paris Review</a></li>
+                <li><a href="https://www.pseudopod.org/">Pseudopod</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="writing-publishing">
+            <h2>Writing & Publishing</h2>
+            <ul>
+                <li><a href="https://nanowrimo.org/">NaNoWriMo</a></li>
+                <li><a href="https://www.wattpad.com/">Wattpad</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="book-blogs">
+            <h2>Book Blogs & Reviews</h2>
+            <ul>
+                <li><a href="https://bookriot.com/">Book Riot</a></li>
+                <li><a href="https://www.npr.org/sections/books/">NPR Books</a></li>
+                <li><a href="https://www.kirkusreviews.com/">Kirkus Reviews</a></li>
+                <li><a href="https://lithub.com/">Literary Hub</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="ancient-history">
+            <h2>Ancient History</h2>
+            <ul>
+                <li><a href="https://www.worldhistory.org/">World History Encyclopedia</a></li>
+                <li><a href="https://www.perseus.tufts.edu/hopper/">Perseus Digital Library</a></li>
+                <li><a href="https://www.sacred-texts.com/">Sacred Texts Archive</a></li>
+            </ul>
+        </div>
+    </div>
+        
+        
+        
+        
+        
+        
+        <!-- Comics Tab -->
+        <div id="comic-tab" class="tab-content">
+        	<div class="category" id="comic-discovery">
+            <h2>Comic Discovery</h2>
+            <ul>
+                <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
+                <li><a href="https://leagueofcomicgeeks.com/">League of Comic Geeks</a></li>
+                <li><a href="https://www.goodreads.com/genres/comics">Goodreads Comics</a></li>
+                <li><a href="https://comicbookroundup.com/">Comic Book Roundup</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="digital-comics">
+            <h2>Digital Comics</h2>
+            <ul>
+                <li><a href="https://www.comixology.com/">ComiXology</a></li>
+                <li><a href="https://global.manga-up.com/">MANGA UP!</a></li>
+                <li><a href="https://www.webtoons.com/">Webtoon</a></li>
+                <li><a href="https://tapas.io/">Tapas</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="print-comics">
+            <h2>Print & Retail</h2>
+            <ul>
+                <li><a href="https://www.tfaw.com/">Things From Another World</a></li>
+                <li><a href="https://www.midtowncomics.com/">Midtown Comics</a></li>
+                <li><a href="https://www.mycomicshop.com/">MyComicShop</a></li>
+                <li><a href="https://www.ebay.com/sch/i.html?_nkw=comic+books">eBay (Comics)</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="comic-news">
+            <h2>Comic News</h2>
+            <ul>
+                <li><a href="https://bleedingcool.com/">Bleeding Cool</a></li>
+                <li><a href="https://www.thepopverse.com/">Popverse</a></li>
+                <li><a href="https://comic-watch.com/">Comic Watch</a></li>
+            </ul>
+            <img src="https://s3.amazonaws.com/comicgeeks/comics/covers/large-7865005.jpg?1721734448" class="category-overlay">
+        </div>
+
+        <div class="category" id="webcomics">
+            <h2>Webcomics</h2>
+            <ul>
+                <li><a href="https://www.sabrina-online.com/">Sabrina Online</a></li>
+                <li><a href="https://xkcd.com/">xkcd</a></li>
+
+            </ul>
+        </div>
+
+        <div class="category" id="indie-comics">
+            <h2>Indie Press Comics</h2>
+            <ul>
+                <li><a href="https://www.imagecomics.com/">Image Comics</a></li>
+                <li><a href="https://www.boom-studios.com/">BOOM! Studios</a></li>
+                <li><a href="https://www.vaultcomics.com/">Vault Comics</a></li>
+                <li><a href="https://www.darkhorse.com/">Dark Horse Comics</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="comic-publishing">
+            <h2>Creating Comics</h2>
+            <ul>
+                <li><a href="https://www.clipstudio.net/en/">Clip Studio Paint</a></li>
+                <li><a href="https://www.kickstarter.com/discover/advanced?category_id=3">Kickstarter</a></li>
+                <li><a href="https://gumroad.com/">Gumroad</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="comic-research">
+            <h2>Comic History</h2>
+            <ul>
+                <li><a href="https://www.comicbookherald.com/">Comic Book Herald (Reading Guides)</a></li>
+                <li><a href="https://www.tcj.com/">The Comics Journal</a></li>
+                <li><a href="https://www.lambiek.net/">Lambiek Comiclopedia</a></li>
+                <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Comics Database</a></li>
+            </ul>
+        </div>
+
+        <div class="category" id="manga">
+            <h2>Manga</h2>
+            <ul>
+                <li><a href="https://www.viz.com/">VIZ Media</a></li>
+                <li><a href="https://www.shonenjump.com/">Shonen Jump</a></li>
+                <li><a href="https://kodansha.us/">Kodansha</a></li>
+                <li><a href="https://www.mangadex.org/">MangaDex</a></li>
+            </ul>
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582467561l/52757844.jpg" class="category-overlay">
+        </div>
+    </div>
 
 
 
@@ -378,12 +461,8 @@
     <!-- Bottom Bar with Links -->
     <div class="bottom-bar">
         <a href="#" class="tab active" data-tab="home-tab">Home</a>
-        <a href="#" class="tab" data-tab="blog-tab">Blogs</a>
         <a href="#" class="tab" data-tab="book-tab">Books</a>
         <a href="#" class="tab" data-tab="comic-tab">Comics</a>
-        <a href="#" class="tab" data-tab="media-tab">Media</a>
-        <a href="#" class="tab" data-tab="shopping-tab">Shopping</a>
-    	<a href="#" class="tab" data-tab="kemetic-tab">Kemetic</a>
     </div>
 
 </body>
