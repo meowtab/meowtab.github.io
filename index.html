@@ -27,8 +27,12 @@
     }
     .header h1 {
         color: #e8eaed;
+        text-decoration: none;
         margin: 0;
     }
+    .header a {
+   	 	text-decoration: none;
+	}
     .search-bar {
         display: flex;
         align-items: center;
@@ -190,7 +194,8 @@
 <body>
     <!-- Header Section with Search Bar -->
     <div class="header">
-        <h1>WELCOME</h1>
+ 		<a href="#" class="tab" data-tab="home-tab"><h1>WELCOME</h1></a>
+
         <div class="search-bar">
             <form id="searchForm" action="https://duckduckgo.com/" method="get">
                 <input type="text" name="q" placeholder="Search..." required>
@@ -295,7 +300,7 @@
         <!-- COMICS TAB -->
         <div id="comic-tab" class="tab-content">
         <div class="category" id="comics">
-            <h2> <a href="#" class="tab" data-tab="comic-tab">Comics</a></h2>
+            <h2>Comics</h2>
             <ul>
                 <li><a href="https://leagueofcomicgeeks.com/comics/new-comics/?publisher=1">New This Week</a></li>
                 <li><a href="https://dc.fandom.com/wiki/DC_Comics_Database">DC Database</a></li>
@@ -371,20 +376,6 @@
 
 
 
-
-
-
-    
-    <!-- Bottom Bar with Links -->
-    <div class="bottom-bar">
-        <a href="#" class="tab active" data-tab="home-tab">Home</a>
-        <a href="#" class="tab" data-tab="blog-tab">Blogs</a>
-        <a href="#" class="tab" data-tab="book-tab">Books</a>
-        <a href="#" class="tab" data-tab="comic-tab">Comics</a>
-        <a href="#" class="tab" data-tab="media-tab">Media</a>
-        <a href="#" class="tab" data-tab="shopping-tab">Shopping</a>
-    	<a href="#" class="tab" data-tab="kemetic-tab">Kemetic</a>
-    </div>
 
 </body>
 
