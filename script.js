@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Change category link colors based on active tab
         if (tabId === "book-tab") {
-            categoryLinks.forEach(link => link.style.color = "#bf3d3e");
-            categoryLinksTwo.forEach(link => link.style.color = "#bf3d3e");
-            searchButton.style.backgroundColor = "#bf3d3e";
+            categoryLinks.forEach(link => link.style.color = "#907145");
+            categoryLinksTwo.forEach(link => link.style.color = "#907145");
+            searchButton.style.backgroundColor = "#907145";
             headerTitle.textContent = "BOOKS";
         } else if (tabId === "comic-tab") {
             categoryLinks.forEach(link => link.style.color = "#6a67ad");
