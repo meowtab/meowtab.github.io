@@ -48,11 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
             searchButton.style.backgroundColor = "#be4292";
             headerTitle.textContent = "SHOPPING";
         } else if (tabId === "kemetic-tab") {
-            categoryLinks.forEach(link => link.style.color = "#f5efec");
-            categoryLinksTwo.forEach(link => link.style.color = "#f5efec");
+            categoryLinks.forEach(link => link.style.color = "#74544b");
+            categoryLinksTwo.forEach(link => link.style.color = "#74544b");
             searchButton.style.backgroundColor = "#74544b";
             const containers = document.querySelectorAll(".category");
-		containers.forEach(container => container.style.backgroundImage = 'url("textures/tile-cork.png")');
             headerTitle.textContent = "KEMETIC";
         } else {
             categoryLinks.forEach(link => link.style.color = "#454544");
