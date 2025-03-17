@@ -110,15 +110,16 @@
     	pointer-events: none;
 	}
 
-    .category-overlay {
+	.category-overlay {
     	position: absolute;
-    	right: -5px;
-    	top: 15px;
-    	width: 85px;
-    	transform: rotate(10deg);
-    	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
-    	pointer-events: none;
-	}
+    	right: 5px; /* Position the overlay on the right side with 5px padding */
+    	top: 5px; /* Align to the top of the container with 5px padding */
+    	width: auto; /* Set a fixed width */
+    	height: calc(100% - 10px); /* Take up full height minus padding (5px top and bottom) */
+    	border-radius: 13px;
+   		pointer-events: none;
+	}	
+
     .category h2 {
         font-size: 18px;
         color: #fff;
@@ -350,7 +351,7 @@
         <div class="category">
             <h2>Manga</h2>
             <ul>
-                <li><a href="https://www.goodreads.com/genres/manga">Goodreads Manga</a></li>
+                <li><a href="https://www.goodreads.com/genres/manga">Goodreads</a></li>
                 <li><a href="https://myanimelist.net/">My Anime List</a></li>
             </ul>
             <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595162446i/50891182.jpg" class="category-overlay">
