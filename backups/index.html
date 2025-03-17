@@ -13,11 +13,8 @@
     	background-color: #1f2020;
         color: #000080;
         margin: 0;
-        overscroll-behavior: none;
         padding: 0;
         margin-bottom: 50px; 
-    	background: url("bg.webp") no-repeat center center fixed;
-   		background-size: cover;
     }
         
     /* ☥ Header with Search Bar ☥ */
@@ -29,10 +26,9 @@
         font-size: 18px
     }
     .header h1 {
-        color: white;
+        color: #e8eaed;
         text-decoration: none;
         margin: 0;
-    	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     }
     .header a {
    	 	text-decoration: none;
@@ -41,23 +37,27 @@
         display: flex;
         align-items: center;
     }
-	.search-bar input[type="text"] {
-    	padding: 10px;
-    	border-radius: 20px;
-    	border: none;
-    	outline: none;
-    	width: 200px;
-    	font-size: 16px;
-    	background-color: #34312a;
-		backdrop-filter: blur(30px) saturate(1.8);
-		-webkit-backdrop-filter: blur(30px) saturate(1.8);
-    	background: rgba(52, 49, 42, 0.75);
-    	color: #d3d4cf;
-
-    	/* Engraved effect */
-    	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.6),
-                	inset -1px -1px 1px rgba(255, 255, 255, 0.5);
-	}
+    .search-bar input[type="text"] {
+        padding: 8px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 200px;
+        font-size: 16px;
+        border: 2px solid #181818;
+    	background-color: #303030;
+    	color: #a3a3a3;
+    }
+    .search-bar button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        background-color: #303030;
+        border: 2px solid #181818;
+        border-radius: 20px;
+        color: #e8eaed;
+        cursor: pointer; 
+        font-size: 16px;
+    }
     .search-bar input::placeholder {
     	color: #a3a3a3;
 	}
@@ -70,65 +70,39 @@
         justify-content: center;
         padding: 10px;
     }
-	.category {
-    	width: 200px;
-    	min-height: 120px;
-    	margin: 10px;
-    	padding: 15px;
-    	padding-top: 8px;
-    	padding-bottom: 4px;
-    	position: relative;
-    
-    	/* Blurred Glass Effect */
-    	background: rgba(139, 136, 130, 0.33);
-		backdrop-filter: blur(30px) saturate(1.5);
-		-webkit-backdrop-filter: blur(30px) saturate(1.5);
-
-		/* Gradient Border */
-    	border-radius: 15px;
-    	
-    
-    	/* Shadow */
-    	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-	}
-	.category::before {
-    	content: "";
-    	position: absolute;
-    	inset: 0;
-    	border-radius: 15px;
-    	padding: 1px; /* Border thickness */
-    
-    	/* Radial Gradient Border */
-    	background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.6) 100%);
-    
-    	/* Mask to keep only the border */
-    	-webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    	mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    	-webkit-mask-composite: destination-out;
-    	mask-composite: exclude;
-
-    	pointer-events: none;
-	}
-
+    .category {
+        width: 200px;
+        min-height: 120px;
+        margin: 10px;
+        background-color: #f1f1f1;
+        padding: 15px;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        border: 1px solid black;
+        border-radius: 10px;
+    	background-repeat: repeat;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
     .category-overlay {
     	position: absolute;
     	right: -5px;
     	top: 15px;
     	width: 85px;
     	transform: rotate(10deg);
-    	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+    	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
     	pointer-events: none;
 	}
     .category h2 {
         font-size: 18px;
-        color: #fff;
+        color: #454544;
         text-decoration: none;
         margin-bottom: -20px;
-        margin-top: 5px;
-    	padding-bottom: 10px;
+        margin-top: -1px;
+    	padding-bottom: 16px;
     }
     .category h2 a {
-        color: #fff;
+        color: #454544;
         text-decoration: none;
     }
     .category h2 a:hover {
@@ -140,13 +114,11 @@
     }
     .category ul li {
         margin: 3px 0px;
-        opacity: 90%;
         padding:0px;
         font-size: 16px;
     }
     .category ul li a {
-        color: #fff;
-        opacity: 90%;
+        color: #787878;
         text-decoration: none;
     }
     .category ul li a:hover {
@@ -154,52 +126,25 @@
     }
 
 	/* ☥ Bottom Bar ☥ */
-	.bottom-bar {
-    	position: fixed;
-    	bottom: 10px;
-    	left: 50%;
-    	transform: translateX(-50%);
-    	background: rgba(139, 136, 130, 0.33);
-    	backdrop-filter: blur(30px) saturate(1.8);
-    	-webkit-backdrop-filter: blur(30px) saturate(1.8);
-    	padding: 10px 25px;
-    	border-radius: 30px;
-    	display: inline-flex;
-    	gap: 25px; /* Space between icons */
-    	align-items: center;
-    	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-	}
-	.bottom-bar::before {
-    	content: "";
-    	position: absolute;
-    	inset: 0;
-    	border-radius: 30px;
-    	padding: 1px; /* Border thickness */
-    
-    	/* Radial Gradient Border */
-    	background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.6) 100%);
-    
-    	/* Mask to keep only the border */
-    	-webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    	mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    	-webkit-mask-composite: destination-out;
-    	mask-composite: exclude;
-
-    	pointer-events: none;
-	}
-	/* Image styles */
-	.bottom-bar a img {
-		filter: invert(100%); /* Invert colors */
-		width: 20px;
-    	height: 20px;
-    	transition: transform 0.3s ease, opacity 0.3s ease;
-	}
-	.bottom-bar a:hover img {
-   		transform: scale(1.1);
-    	opacity: 0.8;
-	}
-
-
+    .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    	background-color: #1f2020;
+        padding: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    .bottom-bar a {
+        color: #e8eaed;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+    .bottom-bar a:hover {
+        text-decoration: underline;
+    }	
     .tab {}
 	.tab-content {
     	display: none;
@@ -211,7 +156,38 @@
 	}
 	
 /* ☥ Light MODE ☥ */
-	@media (prefers-color-scheme: light) {}
+	@media (prefers-color-scheme: light) {
+    body {
+        background-color: #e8e7e6;
+    }
+    .bottom-bar {
+    	background-color: #e8e7e6;
+    }
+	.bottom-bar a {
+        color: #747474;
+    }
+    .header h1 {
+        color: #747474;
+    }
+    .category {
+    	border-color: #848484;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input[type="text"] {
+        border: 2px solid #747474;
+    	background-color: #e8e7e6;
+    	color: #747474;
+    }
+    .search-bar button {
+        border: 2px solid #747474;
+    }
+    .search-bar input::placeholder {
+    	color: #747474;
+	}
+}
 
 </style>
 
@@ -221,12 +197,11 @@
  		<a href="#" class="tab" data-tab="home-tab"><h1>WELCOME</h1></a>
 
         <div class="search-bar">
-   			<form id="searchForm" action="https://www.google.com/search" method="get">
-        	<input type="text" name="q" placeholder="Search..." required>
-
-   			</form>
-		</div>
-		
+            <form id="searchForm" action="https://duckduckgo.com/" method="get">
+                <input type="text" name="q" placeholder="Search..." required>
+                <button class="button" role="button">Go</button>
+            </form>
+        </div>
     </div>
 
     <div class="container">
@@ -450,32 +425,13 @@
 	</div>
 
 
-<!-- Bottom Bar with Navigation and Links -->
-<div class="bottom-bar">
-    <a href="#" class="tab active" data-tab="home-tab">
-        <img src="icons/home.png" alt="Home">
-    </a>
-    <a href="#" class="tab" data-tab="book-tab">
-        <img src="icons/books.png" alt="Books">
-    </a>
-    <a href="#" class="tab" data-tab="media-tab">
-        <img src="icons/media.png" alt="Social Media">
-    </a>
-    <a href="#" class="tab" data-tab="shopping-tab">
-        <img src="icons/shopping.png" alt="Shopping">
-    </a>
-    <a href="#" class="tab" data-tab="blog-tab">
-        <img src="icons/blogs.png" alt="Blogs">
-    </a>
-    <a href="#" class="tab" data-tab="comic-tab">
-        <img src="icons/comics.png" alt="Comics">
-    </a>
-    <a href="#" class="tab" data-tab="kemetic-tab">
-        <img src="icons/kemetic.png" alt="Kemetic">
-    </a>
-    
-</div>
 
+    <!-- Bottom Bar with Links -->
+    <div class="bottom-bar">
+        <a href="#" class="tab active" data-tab="home-tab">Home</a>
+        <a href="#" class="tab" data-tab="book-tab">Books</a>
+        <a href="#" class="tab" data-tab="comic-tab">Comics</a>
+    </div>
 
 
 
