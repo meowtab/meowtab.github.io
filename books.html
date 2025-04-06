@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Book Library</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfaf6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      overscroll-behavior: none;
+      background: url("bg.webp") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    h1 {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        margin-bottom: 20px;
+    	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .library {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      
+    }
+
+    .book {
+      display: flex;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      /* Blurred Glass Effect */
+    	background: rgba(139, 136, 130, 0.33);
+		backdrop-filter: blur(30px) saturate(1.5);
+		-webkit-backdrop-filter: blur(30px) saturate(1.5);
+
+		/* Gradient Border */
+    	border-radius: 15px;
+    	
+    
+    	/* Shadow */
+    	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    .book::before {
+    	content: "";
+    	position: absolute;
+    	inset: 0;
+    	border-radius: 15px;
+    	padding: 1px; /* Border thickness */
+    
+    	/* Radial Gradient Border */
+    	background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.6) 100%);
+    
+    	/* Mask to keep only the border */
+    	-webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    	mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    	-webkit-mask-composite: destination-out;
+    	mask-composite: exclude;
+
+    	pointer-events: none;
+	}
+
+    .book img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+      padding: 8px;
+      border-radius: 20px;
+    }
+
+    .book-info {
+      padding: 20px;
+      display: flex;
+      color: #fff;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .book-title {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+    }
+
+    .book-meta {
+      font-style: italic;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .book-description {
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .book img {
+        width: 100%;
+      }
+
+      .book-info {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Book Library</h1>
+  <div class="library">
+
+    <!-- Example Book Entry -->
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81oNIbMu+ML._SL1500_.jpg" alt="Book Cover" />
+      <div class="book-info">
+        <div class="book-title">They Never Learn</div>
+        <div class="book-meta">by Layne Fargo · Thriller · Finished 2024</div>
+        <div class="book-description">
+          A dark, twisty story about a vigilante professor who punishes abusers—until her world starts to unravel. Clever, tense, and full of moral ambiguity.
+        </div>
+      </div>
+    </div>
+
+    <!-- Another Example -->
+    <div class="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662040413i/61884781.jpg" alt="Book Cover" />
+      <div class="book-info">
+        <div class="book-title">Maeve Fly</div>
+        <div class="book-meta">by CJ Leede · Horror · Finished 2025</div>
+        <div class="book-description">
+          A blood-soaked ride through a disturbed mind—think American Psycho, but make it Halloween. Equal parts grotesque and poetic.
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more .book blocks for each book you’ve read -->
+
+  </div>
+</body>
+</html>
