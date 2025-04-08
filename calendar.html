@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kemetic Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f5f5;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #fff;
+            overscroll-behavior: none;
+            background: url("bg.webp") no-repeat center center fixed;
+            background-size: cover;
+            margin-bottom: 50px;
+        }
+
+        .banner {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            color: white;
+            text-decoration: none;
+            margin: 0;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .date-picker-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 0px auto;
+            width: 60%;
+            max-width: 800px;
+            /* Blurred Glass Effect */
+            background: rgba(139, 136, 130, 0.33);
+            backdrop-filter: blur(30px) saturate(1.5);
+            -webkit-backdrop-filter: blur(30px) saturate(1.5);
+            /* Gradient Border */
+            border-radius: 15px;
+            /* Shadow */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .date-picker-container label, .date-picker-container input, .date-picker-container button {
+            font-size: 1rem;
+            color: #fff;
+            background-color: transparent;
+            margin-left: 10px;
+            border: none;
+        }
+
+        .info-container {
+            padding: 10px;
+            margin: 10px auto;
+            width: 60%;
+            max-width: 800px;
+            text-align: center;
+            /* Blurred Glass Effect */
+            background: rgba(139, 136, 130, 0.33);
+            backdrop-filter: blur(30px) saturate(1.5);
+            -webkit-backdrop-filter: blur(30px) saturate(1.5);
+            /* Gradient Border */
+            border-radius: 15px;
+            /* Shadow */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-container h2 {
+            font-size: 32px;
+            font-family: 'Cinzel', serif;
+            color: #fff;
+        }
+
+        .info-container p {
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .calendar-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .month {
+            padding: 10px;
+            text-align: center;
+            /* Blurred Glass Effect */
+            background: rgba(139, 136, 130, 0.33);
+            backdrop-filter: blur(30px) saturate(1.5);
+            -webkit-backdrop-filter: blur(30px) saturate(1.5);
+            /* Gradient Border */
+            border-radius: 15px;
+            /* Shadow */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .month h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3px;
+        }
+
+        .day {
+            padding: 0px;
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            background: rgba(139, 136, 130, 0.33);
+            /* Gradient Border */
+            border-radius: 15px;
+            border: 1px, solid, rgba(255, 255, 255, 0.2);
+            /* Shadow */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .day:hover {
+            background-color: #ffd180;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .day.current {
+         	color: #fff3e0;
+            background-color: #8b4513;
+            border: 2px solid #8b4513;
+        }
+
+        .day.festival {
+            background-color: #ffecb3;
+        }
+
+        .day.selected {
+            background-color: #90caf9;
+            color: #fff;
+        }
+        .month::before, .info-container::before, .date-picker-container::before  {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 15px;
+            padding: 1px; /* Border thickness */
+        
+            /* Radial Gradient Border */
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0.6) 100%);
+        
+            /* Mask to keep only the border */
+            -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+            mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+
+            pointer-events: none;
+        }
+
+        @media (max-width: 1200px) {
+            .calendar-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .calendar-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .calendar-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .month h3 {
+                font-size: 1rem;
+            }
+
+            .day {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div class="banner">
+        <h1>Kemetic Calendar</h1>
+    </div>
+    
+    <div class="date-picker-container">
+        <label for="start-date">Select start date for I Akhet 1:</label>
+        <input type="date" id="start-date" />
+    </div>
+
+    <div class="info-container" id="festival-info">
+        <h2>Festival Info</h2>
+        <p>No festival selected. Click on a day to view more details.</p>
+    </div>
+    <div class="info-container" id="day-info">
+        <h2>Day Info</h2>
+        <p>Click on a day to see its details.</p>
+    </div>
+    <div class="calendar-container" id="calendar">
+        <!-- Months and days will be generated dynamically -->
+    </div>
+
+    <script>
+        const calendarContainer = document.getElementById("calendar");
+        const dayInfoContainer = document.getElementById("day-info");
+        const festivalInfoContainer = document.getElementById("festival-info");
+        const startDateInput = document.getElementById("start-date");
+        const setJanuary1Button = document.getElementById("set-january-1");
+
+        const kemeticMonths = [
+            "I Akhet", "II Akhet", "III Akhet", "IV Akhet",
+            "I Peret", "II Peret", "III Peret", "IV Peret",
+            "I Shemu", "II Shemu", "III Shemu", "IV Shemu"
+        ];
+
+        const festivals = {
+            "I Akhet 1"    : "Wep Ronpet (New Year’s Day)",
+            "I Akhet 19"   : "Thoth Festival",
+            "II Akhet 13"  : "Feast of Bastet of Bubastis",
+            "IV Akhet 15"  : "Feast of Sekhmet and Bastet before Ra",
+            "I Peret 13"   : "Feast of Bastet",
+            "I Peret 21"   : "Bast Guards the Two Lands",
+            "II Peret 18"  : "Feast of Bastet in Bubastis",
+            "III Peret 13" : "Feast of Bastet",
+            "IV Peret 4"   : "Great Day of Chewing Onions for Bastet",
+            "II Shomu 16"  : "Feast of Bastet"
+        };
+
+function generateCalendar(startDate) {
+    calendarContainer.innerHTML = '';
+    const today = new Date();
+    let selectedDayElement = null;
+
+    kemeticMonths.forEach((month, monthIndex) => {
+        const monthDiv = document.createElement("div");
+        monthDiv.className = "month";
+        const monthHeader = document.createElement("h3");
+        monthHeader.textContent = month;
+        monthDiv.appendChild(monthHeader);
+
+        const daysDiv = document.createElement("div");
+        daysDiv.className = "days";
+
+        for (let day = 1; day <= 30; day++) {
+            const dayDiv = document.createElement("div");
+            dayDiv.className = "day";
+
+            // Calculate the corresponding Gregorian date
+            const currentDate = new Date(startDate);
+            currentDate.setUTCMonth(currentDate.getUTCMonth() + monthIndex);
+            currentDate.setUTCDate(currentDate.getUTCDate() + day - 1);
+
+            const formattedDate = currentDate.toISOString().split('T')[0];
+            const festivalKey = `${month} ${day}`;
+ 
+            // Assign emoji based on festival type
+            const emojiMap = {
+                "Wep Ronpet (New Year’s Day)": "𓇳",
+                "Thoth Festival" : "𓁟",
+                "Feast of Bastet of Bubastis": "𓃠",
+                "Feast of Sekhmet and Bastet before Ra": "𓇳",
+                "Great Day of Chewing Onions for Bastet": "𓃠",
+                "Bast Guards the Two Lands": "𓃠",
+            };
+
+            const festivalName = festivals[festivalKey];
+            const emoji = emojiMap[festivalName] || "";
+
+            dayDiv.textContent = `${day} ${emoji}`;
+
+            // Add tooltip or Gregorian date display
+            dayDiv.title = `Gregorian Date: ${formattedDate}`;
+
+            if (currentDate.toDateString() === today.toDateString()) {
+                dayDiv.classList.add("current");
+            }
+
+            dayDiv.addEventListener("click", () => {
+                if (selectedDayElement) {
+                    selectedDayElement.classList.remove("selected");
+                }
+                selectedDayElement = dayDiv;
+                selectedDayElement.classList.add("selected");
+
+                dayInfoContainer.innerHTML = `<h2>Day Info</h2><p>${festivalKey}: ${festivalName || "No festival"}</p><p>Gregorian Date: ${formattedDate}</p>`;
+            });
+
+            daysDiv.appendChild(dayDiv);
+        }
+
+        monthDiv.appendChild(daysDiv);
+        calendarContainer.appendChild(monthDiv);
+    });
+}
+
+
+        function setAugust8() {
+            const currentDate = new Date();
+            currentDate.setMonth(7); // Set to August (Month 8, 0-indexed)
+            currentDate.setDate(8);  // Set to 8th
+            startDateInput.value = currentDate.toISOString().split("T")[0];
+            generateCalendar(currentDate);
+        }
+
+        startDateInput.addEventListener("change", (event) => {
+            const selectedDate = new Date(event.target.value);
+            generateCalendar(selectedDate);
+        });
+
+        // Initial setup
+        setAugust8();
+    </script>
+</body>
+</html>
