@@ -243,18 +243,18 @@
 
         const festivals = {
             "I Akhet 1"    : "Wep Ronpet (New Year’s Day)",
-            "I Akhet 17"   : "Wag Festival Eve",
-            "I Akhet 18"   : "Wag Festival",
-            "I Akhet 19"   : "Thoth Festival",
-            "I Akhet 19"   : "Feast of Drunkenness",
-            "II Akhet 13"  : "Feast of Bastet of Bubastis",
+            "II Akhet 2"   : "Thoth Festival",
+            "III Akhet 20" : "Feast of Hathor",
+            "IV Akhet 4"   : "Khoiakh Mysteries",
             "IV Akhet 15"  : "Feast of Sekhmet and Bastet before Ra",
-            "I Peret 13"   : "Feast of Bastet",
-            "I Peret 21"   : "Bast Guards the Two Lands",
-            "II Peret 18"  : "Feast of Bastet in Bubastis",
-            "III Peret 13" : "Feast of Bastet",
-            "IV Peret 4"   : "Great Day of Chewing Onions for Bastet",
-            "II Shomu 16"  : "Feast of Bastet"
+            "I Peret 18"   : "She is Led Back",
+            "II Peret 1"   : "Boat Procession of Anubis",
+            "III Peret 14" : "Day of Making Health and (Long) Life",
+            "IV Peret 5"   : "Great Festival of Bast",
+            "IV Peret 27"  : "Feast of Renenutet",
+            "II Shemu 1"   : "Appearance of Nephthys",
+            "IV Shemu 2"   : "Isis Luminous",
+            
         };
 
 function generateCalendar(startDate) {
@@ -288,10 +288,16 @@ function generateCalendar(startDate) {
             const emojiMap = {
                 "Wep Ronpet (New Year’s Day)": "𓇳",
                 "Thoth Festival" : "𓁟",
-                "Feast of Bastet of Bubastis": "𓃠",
-                "Feast of Sekhmet and Bastet before Ra": "𓇳",
-                "Great Day of Chewing Onions for Bastet": "𓃠",
-                "Bast Guards the Two Lands": "𓃠",
+                "Feast of Hathor": "𓉡",
+                "Khoiakh Mysteries" : "𓀲",
+                "Feast of Sekhmet and Bastet before Ra": "𓃠",
+                "She is Led Back" : "𓁹",
+                "Boat Procession of Anubis" : "𓁢",
+                "Day of Making Health and (Long) Life" : "𓋴",
+                "Great Festival of Bast" : "𓃠",
+                "Feast of Renenutet" : "𓆗",
+                "Appearance of Nephthys" : "𓉠",
+                "Isis Luminous" : "𓊨",
             };
 
             const festivalName = festivals[festivalKey];
